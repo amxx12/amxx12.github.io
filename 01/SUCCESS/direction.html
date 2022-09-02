@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		
+		<title>项目01</title>
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'montserrat', sans-serif;
+				box-sizing: border-box;
+			}
+			.services-section {
+				background: rgb(0, 0, 0);
+				background-size: cover;
+				padding: 60px 0;
+			}
+			.inner-width {
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
+				padding: 0 20px;
+				overflow: hidden;
+			}
+			.section-title {
+				text-align: center;
+				color: #ddd;
+				text-transform: uppercase;
+				font-size: 30px;
+			}
+			.border {
+				width: 160px;
+				height: 2px;
+				background: #82ccdd;
+				margin: 40px auto;
+			}
+			.services-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.service-box {
+				max-width: 33.33%;
+				padding: 10px;
+				text-align: center;
+				color: #ddd;
+				cursor: pointer;
+			}
+			.service-icon {
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				border: 3px solid #82ccdd;
+				color: #82ccdd;
+				transform: rotate(45deg);
+				margin-bottom: 30px;
+				margin-top: 16px;
+				transition: 0.3s linear;
+			}
+			.service-icon i {
+				line-height: 70px;
+				transform: rotate(-45deg);
+				font-size: 26px;
+			}
+			.service-box:hover .service-icon {
+				background: #82ccdd;
+				color: #ddd;
+			}
+			.service-title {
+				font-size: 18px;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+			}
+			.service-desc {
+				font-size: 14px;
+			}
+			@media screen and (max-width: 960px) {
+				.service-box {
+					max-width: 45%;
+				}
+			}
+			@media screen and (max-width: 768px) {
+				.service-box {
+					max-width: 50%;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.service-box {
+					max-width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<audio autoplay="autoplay" loop="loop" preload="auto" display: "none"
+	       src="../SUCCESS/misuc/94.mp3">       
+        </audio>
+		
+		<div class="services-section">
+			<div class="inner-width">
+				<h1 class="section-title">班级简介</h1>
+				<div class="border"></div>
+				<div class="services-container">
+					<div  class="service-box">
+						<a href="https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%AE%9E%E9%AA%8C%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%AD%A6%E6%A0%A1/3261047?fr=aladdin" target="_blank">
+						<div class="service-icon">
+							<i class="fas fa-home"></i>
+						</div>
+						</a>
+						<div class="service-title">学校简介</div>
+						<div class="service-desc">
+							了解我们的学校
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/jianjie.html">
+						<div class="service-icon">
+							<i class="fas fa-map-signs"></i>
+						</div>
+						</a>
+						<div class="service-title">班级简介</div>
+						<div class="service-desc">
+							了解我们的班级
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/student.html">
+						<div class="service-icon">
+							<i class="fas fa-address-card"></i>
+						</div>
+						</a>
+						<div class="service-title">班长简介</div>
+						<div class="service-desc">
+							了解我们的班长
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/student2.html">
+						<div class="service-icon">
+							<i class="fas fa-address-card"></i>
+						</div>
+						</a>
+						<div class="service-title">班委简介</div>
+						<div class="service-desc">
+							了解班委（无具体人员）
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/teacher.html">
+						<div class="service-icon">
+							<i class="fas fa-street-view"></i>
+						</div>
+						</a>
+						<div class="service-title">老师</div>
+						<div class="service-desc">
+							查看老师
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/windpeople.html">
+						<div class="service-icon">
+							<i class="fab fa-android"></i>
+						</div>
+						</a>
+						<div class="service-title">风云人物</div>
+						<div class="service-desc">
+							风云班级的人
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="services-section">
+			<div class="inner-width">
+				<h1 class="section-title"></h1>
+				
+				<div class="services-container">
+					<div class="service-box">
+						<a href="../SUCCESS/groupe.html">
+						<div class="service-icon">
+							<i class="fas fa-home"></i>
+						</div>	
+						</a>
+						
+						<div class="service-title">小组</div>
+						<div class="service-desc">
+							小组基本情况
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/teachersaid.html">
+						<div class="service-icon">
+							<i class="fas fa-tag"></i>
+						</div>
+						</a>
+						<div class="service-title">班训</div>
+						<div class="service-desc">
+							班主任的教诲
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/404.html">
+						<div class="service-icon">
+							<i class="fas fa-tasks"></i>
+						</div>
+						</a>
+						<div class="service-title">职位</div>
+						<div class="service-desc">
+							空缺职位（更新中）
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/pingjia.html">
+						<div class="service-icon">
+							<i class="fas fa-paint-brush"></i>
+						</div>
+						</a>
+						<div class="service-title">评价</div>
+						<div class="service-desc">
+							老师的评价
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/homework.html">
+						<div class="service-icon">
+							<i class="fas fa-plus-circle"></i>
+						</div>
+						</a>
+						<div class="service-title">作业</div>
+						<div class="service-desc">
+							作业专题
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/news.html">
+						<div class="service-icon">
+							<i class="fa fa-window-maximize"></i>
+						</div>
+						</a>
+						<div class="service-title">新闻</div>
+						<div class="service-desc">
+							班级新闻与评价
+						</div>
+					</div>
+				</div>
+			</div>
+		
+        </div>
+        <div class="services-section">
+			<div class="inner-width">
+				<h1 class="section-title">关于我们</h1>
+				<div class="border"></div>
+				<div class="services-container">
+					<div class="service-box">
+						<a href="../SUCCESS/about us/gengxin.html">
+						<div class="service-icon">
+							<i class="fas fa-paint-brush"></i>
+						</div>
+						</a>
+						<div class="service-title">更新</div>
+						
+						<div class="service-desc">
+							更新版本与记录
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/about us/Log.html">
+						<div class="service-icon">
+							<i class="fas fa-brush"></i>
+						</div>
+						</a>
+						<div class="service-title">日志</div>
+						<div class="service-desc">
+							网站记录
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/about us/about us.html">
+						<div class="service-icon">
+							<i class="fas fa-object-ungroup"></i>
+						</div>
+						</a>
+						<div class="service-title">关于</div>
+						<div class="service-desc">
+							关于我们
+						</div>
+					</div>
+					<div class="service-box">
+						<a href="../SUCCESS/about us/about me.html">
+						<div class="service-icon">
+							<i class="fas fa-terminal"></i>
+						</div>
+						</a>
+						<div class="service-title">作者</div>
+						<div class="service-desc">
+							关于我们
+						</div>
+					</div>
+					<div class="service-box">
+						<div class="service-icon">
+							<i class="fas fa-spinner"></i>
+						</div>
+						<div class="service-title">敬请期待</div>
+						<div class="service-desc">
+							敬请期待
+						</div>
+					</div>
+					<div class="service-box">
+						<div class="service-icon">
+							<i class="fas fa-spinner"></i>
+						</div>
+						<div class="service-title">敬请期待</div>
+						<div class="service-desc">
+							敬请期待
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+
+</html>
