@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+ <html lang="zh-CN" id="bgimg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>CUA——8296</title>
+<link rel="icon" href="" mce_href="/dir/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/showcase.css">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<meta name="referrer" content="no-referrer" />
+<div style="text-align:center;clear:both">
+</div>
+
+<style type="text/css">
+	body{
+		cursor:url(src/default.cur), auto;
+	}
+	#bigcontainer{
+			
+		}
+		#bigcontainer.form-success #container h1 {
+			/* 特别注意这里的.form-success要紧跟在#bigcontainer的后面,
+			不能有空格,否则将不能实现效果 */
+			 transform: translateY(85px);
+		}
+		#container{
+			text-align: center;
+			height: 100px;
+			line-height: 55px;
+			/* margin-top: 7%; */
+			margin: 0 auto;
+		}
+		#container h1{
+			 color: rgb(22, 220, 255);
+			 font-size: 40px;
+		     font-weight: 300;
+			 margin-bottom: 13px;
+			 transition-duration: 1s;
+			 /* 过程花费时间设计 */
+			 transition-timing-function: ease-in-out;
+			 /* 过渡时的一个效果.慢快慢 */
+		}
+		
+		
+		form input{
+			/* 可以用#container input也可以这样form下的input */
+			width: 250px;
+			height: 45px;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			border-radius: 2px;
+			background-color: rgba(255, 255, 255, 0.1);
+			display: inline-block;
+			color: orange;
+			text-align: center;
+			font-size: 20px;
+		appearance: none;
+		/* !*使div标签看上去更像一个按钮*! */
+	    outline: 0;
+		/* 突出元素的效果 */
+		transition-duration: 0.3s;
+		/* 在0.3s内完成变换 */
+		}
+		form input:hover{
+			background-color: rgba(235, 235, 235, 0.3);
+		}
+	
+		form input:focus{
+			/* 当点击时 */
+			width: 300px;
+			background-color: white;
+			color: #ee9ca7;
+			font-weight: 300;
+			/* transform: scaleX(1.2); */
+			
+		}
+		form button{
+			/* 同理上 */
+			width: 250px;
+			height: 50px;
+			background-color: white;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			border-radius: 5px;
+			color: red;
+			font-size: 20px;
+			font-weight: 400;
+			cursor:url(src/hand.cur),auto;
+		}
+		form button:hover{				        
+	    background-color: #e9ebec;
+	}
+</style>
+<style>
+		video{
+          position: fixed;
+          right:0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -9999;
+		  //opacity: 60%;
+		  //filter: blur(0px); //背景模糊设置
+          /*灰色调*/
+          //-webkit-filter:grayscale(0%)
+		  
+      }
+</style>
+</head>
+<body>
+<div id="top">
+<main id="top_main">
+<div id="top_logo"><img src="src/tx2.jpg" onmouseover="mouseOver()" onmouseout="mouseOut()" id="mainimg"></div>
+<div id="top_title"><img id="top_title01" alt="" src="src/toptitle01.png">
+<br class="top_hr_style01">
+</div><br><br>
+             <div id="bigcontainer">
+             	<div id="container">
+             		<h1>CUA——8296</h1>
+             		<form >
+						<a href="01/SUCCESS/direction.html">
+							 <button type="button" class="btn btn-primary btn-lg">进入班级主页</button>
+				        </a>
+						<a href="photo.html">
+							<button type="button" class="btn btn-primary btn-lg">进入个人主页</button>
+					   </a>
+						
+             		</form>
+             	</div>
+             </div>  
+
+</main>
+</div>
+<footer id="top_footer">
+
+</footer>
+<audio autoplay="autoplay" loop="loop" preload="auto" display: "none"
+	src="music/1.mp3">       
+</audio>
+<!-- muted 视频的音频输出为静音  controls 则向用户显示控件，比如播放按钮-->
+<video id="v1" autoplay loop muted style="width: 100%">
+			<source  src="video/2.mp4" type="video/mp4">
+</video
+</body>
+<script>
+	function mouseOver(){
+		document.getElementById("mainimg").src="src/tx.jpg";//鼠标悬浮时的旋转图标
+	}
+	function mouseOut()
+	{
+		document.getElementById('mainimg').src ="src/tx2.jpg"//默认的旋转图标
+	}
+</script>
+
+<script type="text/javascript" src="src/snow.min.js"></script>        
+<script type="text/javascript">
+createSnow('src/', 60);
+
+
+</html>
