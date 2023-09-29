@@ -33,7 +33,7 @@
 			margin: 0 auto;
 		}
 		#container h1{
-			 color: rgb(22, 220, 255);
+			 color: rgb(0, 0, 0);
 			 font-size: 40px;
 		     font-weight: 300;
 			 margin-bottom: 13px;
@@ -112,7 +112,7 @@
 <body>
 <div id="top">
 <main id="top_main">
-<div id="top_logo"><img src="src/tx2.jpg" onmouseover="mouseOver()" onmouseout="mouseOut()" id="mainimg"></div>
+<div id="top_logo"><img src="src/3.png" onmouseover="mouseOver()" onmouseout="mouseOut()" id="mainimg"></div>
 <div id="top_title"><img id="top_title01" alt="" src="src/toptitle01.png">
 <br class="top_hr_style01">
 </div><br><br>
@@ -123,9 +123,10 @@
 						<a href="01/SUCCESS/direction.html">
 							 <button type="button" class="btn btn-primary btn-lg">进入班级主页</button>
 				        </a>
-						<a href="photo.html">
+						<a href="../02/new-person-web/index.html">
 							<button type="button" class="btn btn-primary btn-lg">进入个人主页</button>
-				</a>
+					   </a>
+					  
 						
              		</form>
              	</div>
@@ -136,27 +137,25 @@
 <footer id="top_footer">
 
 </footer>
-<audio autoplay="autoplay" loop="loop" preload="auto" display: "none"
+<audio autoplay="autoplay" loop="loop" preload="auto" display: "none">
 	src="music/1.mp3">       
 </audio>
 <!-- muted 视频的音频输出为静音  controls 则向用户显示控件，比如播放按钮-->
 <video id="v1" autoplay loop muted style="width: 100%">
 			<source  src="video/2.mp4" type="video/mp4">
-</video
+</video>
 </body>
 <script>
 	function mouseOver(){
-		document.getElementById("mainimg").src="src/tx.jpg";//鼠标悬浮时的旋转图标
+		document.getElementById("mainimg").src="src/3.png";//鼠标悬浮时的旋转图标
 	}
 	function mouseOut()
 	{
-		document.getElementById('mainimg').src ="src/tx2.jpg"//默认的旋转图标
+		document.getElementById('mainimg').src ="src/3.png"//默认的旋转图标
 	}
 </script>
 
 <script type="text/javascript" src="src/snow.min.js"></script>        
 <script type="text/javascript">
 createSnow('src/', 60);
-
-
 </html>
