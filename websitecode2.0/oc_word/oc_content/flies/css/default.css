@@ -1,0 +1,48 @@
+* {
+	font-size: 0.75rem;
+}
+html,body{
+	max-height: 100%;
+}
+body{
+	margin:0px;
+	padding:0px;
+}
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*正常的未被访问过的链接*/
+a:link {
+	text-decoration: none;
+}
+
+/*已经访问过的链接*/
+a:visited {
+	text-decoration: none;
+}
+
+/*鼠标划过(停留)的链接*/
+a:hover {
+	text-decoration: none;
+}
+
+/* 正在点击的链接*/
+a:active {
+	text-decoration: none;
+}
+
+.float_l {
+	float: left;
+}
+
+.float_r {
+	float: right;
+}
