@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Upload Files using XMLHttpRequest - Minimal</title>
+		<script type="text/javascript" src="js/jquery.min.js">
+			<script type = "text/javascript" >
+				function fileSelected() {
+					var file = document.getElementById('fileToUpload').files[0];
+					if (file) {
+						var fileSize = 0;
+						if (file.size > 1024 * 1024)
+							fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+						else
+							fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+
+						document.getElementById('fileName').innerHTML = 'Name: ' + file.name;
+						document.getElementById('fileSize').innerHTML = 'Size: ' + fileSize;
+						document.getElementById('fileType').innerHTML = 'Type: ' + file.type;
+					}
+				}
+
+			function uploadFile() {
+				var fd = new FormData();
+				//把上传的文件绑定到FormData
+				fd.append("file", document.getElementById('fileToUpload').files[0]);
+				var xhr = new XMLHttpRequest();
+				//请求中的方法。
+				xhr.upload.addEventListener("progress", uploadProgress, false);
+				//请求成功调用的方法
+				xhr.addEventListener("load", uploadComplete, false);
+				//请求错误调用方法
+				xhr.addEventListener("error", uploadFailed, false);
+				//取消请求调用方法
+				xhr.addEventListener("abort", uploadCanceled, false);
+				//请求方式与请求url
+				xhr.open("POST", "http://www.emmmya.com:8234/assets/fileUpload");
+				//将请求绑定FormData
+				xhr.send(fd);
+			}
+
+			function uploadProgress(evt) {
+				if (evt.lengthComputable) {
+					var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+					document.getElementById('progressNumber').innerHTML = percentComplete.toString() + '%';
+				} else {
+					document.getElementById('progressNumber').innerHTML = '无法计算';
+				}
+			}
+
+			function uploadComplete(evt) {
+				/* 当服务器响应后，这个事件就会被触发 */
+				alert(evt.target.responseText);
+			}
+
+			function uploadFailed(evt) {
+				alert("上传文件发生了错误尝试");
+			}
+
+			function uploadCanceled(evt) {
+				alert("上传被用户取消或者浏览器断开连接");
+			}
+		</script>
+		<style type="text/css">
+			#upload_div {
+				width:500px;
+				height: 300px;
+				background-color: #118DEF; 
+				margin-top: 300px;
+				
+				
+				margin-left: -250px;    /* 宽度的一半 */
+				/*自适应父标签的垂直居中*/
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+
+				display: -moz-box;
+				-moz-box-orient: horizontal;
+				-moz-box-pack: center;
+				-moz-box-align: center;
+
+				display: -o-box;
+				-o-box-orient: horizontal;
+				-o-box-pack: center;
+				-o-box-align: center;
+
+				display: -ms-box;
+				-ms-box-orient: horizontal;
+				-ms-box-pack: center;
+				-ms-box-align: center;
+
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+		</style>
+	</head>
+	<body style="margin:0 auto;">
+		<div id="upload_div">
+			<form id="form1" enctype="multipart/form-data" method="post" action="javascript:void(0);">
+				<div class="row">
+					<label for="fileToUpload">Select a File to Upload</label><br />
+					<input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" />
+				</div>
+				<div id="fileName"></div>
+				<div id="fileSize"></div>
+				<div id="fileType"></div>
+				<div class="row">
+					<input type="button" onclick="uploadFile()" value="Upload" />
+				</div>
+				<!--进度条-->
+				<div id="progressNumber"></div>
+			</form>
+		</div>
+	</body>
+</html>
